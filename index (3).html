@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido del Curso - Acceso Temporal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .modulo {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+            margin-top: 10px;
+        }
+        .expirado {
+            text-align: center;
+            font-size: 1.5em;
+            color: red;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Acceso Temporal a los Módulos del Curso</h1>
+    <div id="contenido"></div>
+
+    <script>
+        const fechaExpiracion = new Date("2025-07-27T10:52:12Z");
+        const ahora = new Date();
+        const container = document.getElementById("contenido");
+
+        if (ahora < fechaExpiracion) {
+            container.innerHTML = `
+                <div class="modulo">
+                    <h2>Módulo I: "La Negociación Interna"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/b8ea0c9c-d65f-11ef-b244-b22126f19527" allowfullscreen></iframe>
+                </div>
+                <div class="modulo">
+                    <h2>Módulo II: "El Bucle Estratégico"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/35d08604-df35-11ef-856b-9ed521150b5e" allowfullscreen></iframe>
+                </div>
+                <div class="modulo">
+                    <h2>Módulo III: "Estrategias"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/afea89da-037f-11f0-a250-5a4885b7d978" allowfullscreen></iframe>
+                </div>
+                <div class="modulo">
+                    <h2>Módulo IV: "Gestión de la Información Táctica"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/8e598624-df33-11ef-a28c-5e37dede239a" allowfullscreen></iframe>
+                </div>
+                <div class="modulo">
+                    <h2>Módulo V: "Control Táctico"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/31ca9c2e-df31-11ef-865e-e6de6d2bef40" allowfullscreen></iframe>
+                </div>
+                <div class="modulo">
+                    <h2>Módulo VI: "Persuasión táctica"</h2>
+                    <iframe allowfullscreen src="https://new-acc-space-19034.ispring.eu/app/embed-player/991bb1f4-df2e-11ef-a74f-5e37dede239a" allowfullscreen></iframe>
+                </div>
+            `;
+        } else {
+            container.innerHTML = "<p class='expirado'>Este contenido ha expirado y ya no está disponible.</p>";
+        }
+    </script>
+</body>
+</html>
